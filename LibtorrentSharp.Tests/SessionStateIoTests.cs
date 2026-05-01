@@ -49,6 +49,7 @@ public sealed class SessionStateIoTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void SaveState_throwsAfterDispose()
     {
         var session = new LibtorrentSession();

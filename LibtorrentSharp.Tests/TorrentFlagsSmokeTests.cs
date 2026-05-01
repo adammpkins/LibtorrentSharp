@@ -112,6 +112,7 @@ public sealed class TorrentFlagsSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void Flags_returnsNone_onInvalidMagnetHandle()
     {
         using var session = new LibtorrentSession();

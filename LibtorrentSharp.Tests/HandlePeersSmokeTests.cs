@@ -45,6 +45,7 @@ public sealed class HandlePeersSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void ConnectPeer_RejectsNullAddressAndBadPort()
     {
         using var session = NewSession();
@@ -93,6 +94,7 @@ public sealed class HandlePeersSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void RenameFile_RejectsEmptyName()
     {
         using var session = NewSession();

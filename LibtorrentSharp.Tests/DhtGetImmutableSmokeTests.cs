@@ -31,6 +31,7 @@ public sealed class DhtGetImmutableSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void DhtGetImmutable_throwsAfterDispose()
     {
         var session = new LibtorrentSession();

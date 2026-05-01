@@ -87,6 +87,7 @@ public sealed class SessionListenAlertTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void GetListenInterfaces_throwsAfterDispose()
     {
         var session = new LibtorrentSession();

@@ -30,6 +30,7 @@ public sealed class DhtMutablePutSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void DhtPutItemMutable_throwsOnNullArgs()
     {
         using var session = new LibtorrentSession();
@@ -43,6 +44,7 @@ public sealed class DhtMutablePutSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void DhtPutItemMutable_throwsOnWrongKeyLengths()
     {
         using var session = new LibtorrentSession();
@@ -55,6 +57,7 @@ public sealed class DhtMutablePutSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void DhtPutItemMutable_throwsAfterDispose()
     {
         var session = new LibtorrentSession();

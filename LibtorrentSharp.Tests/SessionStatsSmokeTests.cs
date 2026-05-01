@@ -58,6 +58,7 @@ public sealed class SessionStatsSmokeTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void PostSessionStats_ThrowsAfterDispose()
     {
         var session = new LibtorrentSession();

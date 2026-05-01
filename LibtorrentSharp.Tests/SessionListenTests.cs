@@ -68,6 +68,7 @@ public sealed class SessionListenTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void ListenPort_throwsAfterDispose()
     {
         var session = new LibtorrentSession();
@@ -76,6 +77,7 @@ public sealed class SessionListenTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void SetListenInterfaces_throwsOnNull()
     {
         using var session = new LibtorrentSession();
@@ -83,6 +85,7 @@ public sealed class SessionListenTests
     }
 
     [Fact]
+    [Trait("Category", "Native")]
     public void SetListenInterfaces_throwsAfterDispose()
     {
         var session = new LibtorrentSession();
