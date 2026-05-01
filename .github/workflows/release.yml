@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build
+        run: dotnet build LibtorrentSharp/LibtorrentSharp.csproj -c Release
+
+      - name: Test (non-network)
+        run: dotnet test LibtorrentSharp.Tests/LibtorrentSharp.Tests.csproj --filter "Category!=Network" -c Release
+
+      - name: Pack
+        run: dotnet pack LibtorrentSharp/LibtorrentSharp.csproj -c Release --no-build -o nupkgs
+
+      - name: Publish to NuGet.org
+        run: dotnet nuget push "nupkgs/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

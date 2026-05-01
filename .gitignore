@@ -1,0 +1,36 @@
+## Build output
+bin/
+obj/
+out/
+
+## CMake / native build
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.cmake
+*.make
+
+## vcpkg
+vcpkg_installed/
+
+## .NET
+*.user
+*.suo
+.vs/
+*.nupkg
+*.snupkg
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Rider / VS Code
+.idea/
+.vscode/
+
+## Test output
+TestResults/
+
+## Logs
+*.log

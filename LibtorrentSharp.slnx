@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LibtorrentSharp/LibtorrentSharp.csproj" />
+  <Project Path="LibtorrentSharp.Tests/LibtorrentSharp.Tests.csproj" />
+</Solution>
