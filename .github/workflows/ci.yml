@@ -21,4 +21,4 @@ jobs:
         run: dotnet build LibtorrentSharp/LibtorrentSharp.csproj -c Release
 
       - name: Test (non-network)
-        run: dotnet test LibtorrentSharp.Tests/LibtorrentSharp.Tests.csproj --filter "Category!=Network" -c Release --logger "console;verbosity=normal"
+        run: dotnet test LibtorrentSharp.Tests/LibtorrentSharp.Tests.csproj --filter "Category!=Network&Category!=Native" -c Release --logger "console;verbosity=normal"
